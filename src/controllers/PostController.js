@@ -17,7 +17,7 @@ module.exports = {
 
         await sharp(req.file.path)
             .resize(500).jpeg({ quality: 70 }).toFile(
-                path.resolve(destination, 'rescized', filename)
+                path.resolve(destination, 'redimensionada', filename)
             )
         fs.unlinkSync(req.file.path)
 
